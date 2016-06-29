@@ -15,17 +15,20 @@
           </div>
           <button class="btn" id="submitCity" ng-click="submit()">Get Weather</button>
           <div class="error" ng-if="errorLabel">
-            {{ errorLabel }}
+            <b>{{ errorLabel }}</b>
           </div>
         </form>
-      </div>
 
-      <div class="row" id="forecastResults" ng-if="forecast">
-        <div class="div-transition col-1" ng-repeat="day in forecast">
-
-          <!-- <img ng-src="{{day.image}}"/> -->
-          {{ day.temperature.high | fahrenheitToCelcius }}
-          {{ day.temperature.low | fahrenheitToCelcius }}
+        <div class="div-transition col-1" id="forecastResults" ng-if="forecast" ng-repeat="day in forecast">
+          {{day.dayOfTheWeek}}
+          <div class="dayOfWeek"><b>{{day.day}}</b></div>
+          <img class="img" ng-src="{{day.image}}"/>
+          <span class="temperature-high">
+            <b>{{ day.temperature.high | fahrenheitToCelcius }}</b>
+          </span>
+          <span class="temperature-low">
+            <b>{{ day.temperature.low | fahrenheitToCelcius }}</b>
+          </span>
         </div>
       </div>
 

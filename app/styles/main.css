@@ -1,23 +1,45 @@
 .div-transition{
-	width: 100px;
-  height: 100px;
+  width: 100px;
+  height: 70px;
   background: #f2f2f2;
-  -webkit-transition: height 2s; /* For Safari 3.1 to 6.0 */
-  transition: height 2s;
-}
-
-.div-transition:hover {
-	height: 200px;
 }
 
 .container {
   font-family: sans-serif;
-	height: 450px;
+  height: 450px;
   padding-top: 0;
-	margin-left: 15%;
-	margin-right: 15%;
+  margin-left: 15%;
+  margin-right: 15%;
   border: 10px solid #005ce6;
   background: #4da6ff;
+}
+
+.temperature-high{
+  color: red;
+  font-size: 10;
+  float: right;
+  margin-top: -20px;
+  margin-right: -10px;
+  position: relative;
+}
+
+.temperature-low{
+  color: blue;
+  font-size: 10;
+  float: left;
+  margin-top: -20px;
+  margin-left: -10px;
+  position: relative;
+}
+
+input[type=text]{
+  border-radius: 5px;
+  padding: 6px 10px;
+  margin: 3px 0;
+}
+
+input[type=text]:focus {
+    border: 2px solid #555;
 }
 
 form {
@@ -26,10 +48,16 @@ form {
 
 .main-box {
   border: 10px;
+  padding: 20px 100px 20px 100px;
 }
 
 h1 {
   color: white;
+  text-align: center;
+}
+
+.dayOfWeek {
+  font-size: 15;
   text-align: center;
 }
 
@@ -45,14 +73,26 @@ h1 {
 .error {
   color: red;
   font-style: bold;
+  font-family: serif;
+  font-stretch: condensed;
+}
+
+.img{
+  height: 70px;
+  width: 70px;
+  position: relative;
 }
 
 [class*="col-"] {
     float: left;
     padding: 15px;
+    border: 1px solid white;
+    border-radius: 10px;
 }
-.col-1 {width: 8.33%;}
+
+.col-1 {width: 70px}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
+.col-6 {width: 20%}

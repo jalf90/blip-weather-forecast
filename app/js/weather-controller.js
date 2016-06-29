@@ -2,14 +2,16 @@ blipWeatherApp.controller('weatherController', ['$scope','weatherService', funct
   function loadImage(description) {
     var images = {
       'Sunny': 'assets/images/sunny.png',
+      'Partly Sunny': 'assets/images/partlySunny.png',
       'Mostly Sunny': 'assets/images/mostlySunny.png',
-      'Partly Cloudy': 'assets/images/5.png',
-      'Scattered Showers': 'assets/images/mostlySunny.png',
-      'Thunderstorms': 'assets/images/mostlySunny.png',
-      'Cloudy': 'assets/images/mostlySunny.png',
-      'Scattered Thunderstorms': 'assets/images/mostlySunny.png',
-      'Rain': 'assets/images/mostlySunny.png',
-      'Breezy': 'assets/images/mostlySunny.png'
+      'Cloudy': 'assets/images/cloudy.png',
+      'Partly Cloudy': 'assets/images/partlyCloudy.png',
+      'Mostly Cloudy': 'assets/images/mostlyCloudy.png',
+      'Scattered Showers': 'assets/images/scatteredShowers.png',
+      'Thunderstorms': 'assets/images/thunderstorms.png',
+      'Scattered Thunderstorms': 'assets/images/scatteredThunderstorms.png',
+      'Rain': 'assets/images/rain.png',
+      'Breezy': 'assets/images/breezy.png'
     };
 
     return images[description];
@@ -21,7 +23,7 @@ blipWeatherApp.controller('weatherController', ['$scope','weatherService', funct
 
   function buildForecastElement(forecast) {
     return {
-      day: dayOfTheWeek((new Date(forecast.data)).getDay()),
+      day: dayOfTheWeek((new Date(forecast.date)).getDay()),
       temperature: {
         high: forecast.high,
         low: forecast.low
