@@ -1,0 +1,58 @@
+.div-transition{
+	width: 100px;
+  height: 100px;
+  background: #f2f2f2;
+  -webkit-transition: height 2s; /* For Safari 3.1 to 6.0 */
+  transition: height 2s;
+}
+
+.div-transition:hover {
+	height: 200px;
+}
+
+.container {
+  font-family: sans-serif;
+	height: 450px;
+  padding-top: 0;
+	margin-left: 15%;
+	margin-right: 15%;
+  border: 10px solid #005ce6;
+  background: #4da6ff;
+}
+
+form {
+  color: white;
+}
+
+.main-box {
+  border: 10px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.btn {
+  background-color: #005ce6;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-style: bold;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}

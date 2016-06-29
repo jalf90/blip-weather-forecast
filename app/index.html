@@ -1,0 +1,38 @@
+<html ng-app="blipWeatherForecast">
+  <head>
+    <title>Blip Weather Forecast</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <div class="container" ng-controller="weatherController">
+      <div class="main-box">
+        <h1>Blip Weather Forecast</h1>
+
+        <form id="forecastForm" name="weatherForm">
+          <div>
+            <label for="city-name">City</label>
+            <input id="city-name" type="text" ng-model="cityName" placeholder="e.g. Porto"></input>
+          </div>
+          <button class="btn" id="submitCity" ng-click="submit()">Get Weather</button>
+          <div class="error" ng-if="errorLabel">
+            {{ errorLabel }}
+          </div>
+        </form>
+      </div>
+
+      <div class="row" id="forecastResults" ng-if="forecast">
+        <div class="div-transition col-1" ng-repeat="day in forecast">
+
+          <!-- <img ng-src="{{day.image}}"/> -->
+          {{ day.temperature.high | fahrenheitToCelcius }}
+          {{ day.temperature.low | fahrenheitToCelcius }}
+        </div>
+      </div>
+
+      <script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+      <script type="text/javascript" src="js/weather-module.js"></script>
+      <script type="text/javascript" src="js/weather-service.js"></script>
+      <script type="text/javascript" src="js/weather-controller.js"></script>
+      <script type="text/javascript" src="js/commons/fahrenheit-to-celcius-filter.js"></script>
+  </body>
+</html>
