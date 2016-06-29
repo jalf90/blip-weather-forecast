@@ -30,7 +30,7 @@ $ npm start
 
 You now have the application running in your machine, just navigate to:
 
-## http://localhost:9000/app/
+http://localhost:9000/app/
 
 Use the search box to know the forecast for your city.
 
